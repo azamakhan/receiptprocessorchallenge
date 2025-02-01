@@ -1,5 +1,6 @@
 package com.challenge.receiptprocessor.service;
 
+import com.challenge.receiptprocessor.exception.ReceiptNotFoundException;
 import com.challenge.receiptprocessor.model.request.Receipt;
 import com.challenge.receiptprocessor.utils.PointsCalculator;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,9 @@ public class ReceiptServiceImpl implements ReceiptService {
     }
 
     public int getPoints(String id) {
-        return receiptPoints.getOrDefault(id, 0);
+        if (!receiptPoints.containsKey(id)) {
+            throw new ReceiptNotFoundException("Receipt ID " + id + " not found.");
+        }
+        return receiptPoints.get(id);
     }
 }
