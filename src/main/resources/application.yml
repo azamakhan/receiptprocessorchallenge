@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: receiptprocessor
+
+logging:
+  level:
+    root: INFO
+    com.challenge.receiptprocessor: DEBUG
+
+server:
+  address: 0.0.0.0
