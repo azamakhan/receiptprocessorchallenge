@@ -5,9 +5,9 @@ import lombok.Data;
 
 @Data
 public class Item {
-    @NotBlank(message = "Short description is required")
+    @NotBlank(message = "Short description is missing and is required.")
     private String shortDescription;
 
-    @NotBlank(message = "Price is required")
+    @NotBlank(message = "Price is missing and is required.")
     private String price;
 }

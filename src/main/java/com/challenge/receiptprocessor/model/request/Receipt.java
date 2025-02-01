@@ -10,18 +10,18 @@ import java.util.List;
 
 @Data
 public class Receipt {
-    @NotBlank(message = "Retailer name is required")
+    @NotBlank(message = "Retailer name is missing and is required.")
     private String retailer;
 
-    @NotNull(message = "Purchase date is required")
+    @NotNull(message = "Purchase date is missing and is required.")
     private LocalDate purchaseDate;
 
-    @NotNull(message = "Purchase time is required")
+    @NotNull(message = "Purchase time is missing and is required.")
     private LocalTime purchaseTime;
 
-    @NotEmpty(message = "At least one item is required")
+    @NotEmpty(message = "Items is missing and at least one item is required.")
     private List<Item> items;
 
-    @NotBlank(message = "Total is required")
+    @NotBlank(message = "Total is missing and is required.")
     private String total;
 }
