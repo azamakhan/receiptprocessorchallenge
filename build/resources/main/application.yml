@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: receiptprocessor
-
-logging:
-  level:
-    root: INFO
-    com.receiptprocessor: DEBUG
